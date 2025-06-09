@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Integration Challenge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#1F2937'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b">
+        <div class="max-w-6xl mx-auto px-4 py-6">
+            <h1 class="text-3xl font-bold text-gray-900">API Integration Challenge</h1>
+            <p class="text-gray-600 mt-2">Fetch data from an API and display it dynamically</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-4 py-8">
+        <!-- Instructions Section -->
+        <section class="bg-white rounded-lg shadow-sm p-6 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">📋 Your Task</h2>
+            <div class="prose text-gray-600">
+                <p class="mb-4">
+                    Welcome to the API Integration Challenge! Your task is to fetch data from a real API
+                    and display it in a user-friendly format below.
+                </p>
+                <p class="mb-4">
+                    <strong>What you need to do:</strong>
+                </p>
+                <ul class="list-disc ml-6 mb-4">
+                    <li>Fetch data from the provided API endpoint</li>
+                    <li>Parse the JSON response</li>
+                    <li>Create HTML elements to display the data</li>
+                    <li>Handle loading states and errors gracefully</li>
+                </ul>
+                <p class="text-sm text-blue-600">
+                    💡 <strong>Hint:</strong> Check the README.md file for detailed instructions and the API endpoint!
+                </p>
+            </div>
+        </section>
+
+        <!-- Controls Section -->
+        <section class="bg-white rounded-lg shadow-sm p-6 mb-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">🎮 Controls</h2>
+            <div class="flex flex-wrap gap-4">
+                <button
+                    id="loadDataBtn"
+                    class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+                >
+                    Load Data
+                </button>
+                <button
+                    id="clearDataBtn"
+                    class="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200"
+                >
+                    Clear Data
+                </button>
+            </div>
+        </section>
+
+        <!-- Loading State -->
+        <div id="loadingState" class="hidden bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+            <div class="flex items-center justify-center">
+                <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mr-3"></div>
+                <span class="text-blue-700 font-medium">Loading data...</span>
+            </div>
+        </div>
+
+        <!-- Error State -->
+        <div id="errorState" class="hidden bg-red-50 border border-red-200 rounded-lg p-6 mb-8">
+            <div class="flex items-center">
+                <div class="text-red-600 mr-3">❌</div>
+                <div>
+                    <h3 class="text-red-800 font-semibold">Error loading data</h3>
+                    <p id="errorMessage" class="text-red-600 text-sm mt-1"></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Display Section -->
+        <section class="bg-white rounded-lg shadow-sm p-6">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">📊 Data Display</h2>
+            <div id="dataContainer" class="min-h-[200px]">
+                <div class="text-center text-gray-500 py-16">
+                    <div class="text-6xl mb-4">📡</div>
+                    <p class="text-lg">No data loaded yet</p>
+                    <p class="text-sm mt-2">Click "Load Data" to fetch and display information from the API</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t mt-16">
+        <div class="max-w-6xl mx-auto px-4 py-6 text-center text-gray-600">
+            <p>Good luck with your API integration challenge! 🚀</p>
+        </div>
+    </footer>
+
+    <script>
+        // TODO: Implement your API integration here!
+        // This is where you'll write your JavaScript code to:
+        // 1. Fetch data from the API
+        // 2. Handle loading states
+        // 3. Process the JSON response
+        // 4. Create and display HTML elements
+        // 5. Handle errors gracefully
+
+        console.log("Ready to start coding! Check the README.md for instructions.");
+
+        // Example of how to get started (you'll need to replace this with actual implementation):
+        document.getElementById('loadDataBtn').addEventListener('click', function() {
+            console.log('Load Data button clicked - implement your API call here!');
+            // Your code here
+        });
+
+        document.getElementById('clearDataBtn').addEventListener('click', function() {
+            console.log('Clear Data button clicked');
+            // Your code here
+        });
+    </script>
+</body>
+</html>
